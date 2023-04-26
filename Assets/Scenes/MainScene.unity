@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.36870378, g: 0.39601517, b: 0.45063797, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 32
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 1.7
-    agentSlope: 10
-    agentClimb: 0.24
+    agentRadius: 0.65
+    agentHeight: 2
+    agentSlope: 60
+    agentClimb: 0.7
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    minRegionArea: 2
+    minRegionArea: 8
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.21666665
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -245,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 22.9, z: -12.2}
+  m_LocalPosition: {x: -4.5, y: 8.4, z: -1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.13
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
@@ -489,7 +489,7 @@ PrefabInstance:
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.12
+      value: -7.86
       objectReference: {fileID: 0}
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
@@ -550,8 +550,6 @@ GameObject:
   - component: {fileID: 796359046}
   - component: {fileID: 796359050}
   - component: {fileID: 796359047}
-  - component: {fileID: 796359048}
-  - component: {fileID: 796359049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -606,44 +604,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: -0, y: 1, z: 0}
---- !u!54 &796359048
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796359044}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!195 &796359049
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796359044}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 4
-  m_Acceleration: 10000
-  avoidancePriority: 50
-  m_AngularSpeed: 36000
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &796359050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.18
+      value: -6.28
       objectReference: {fileID: 0}
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
@@ -1101,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 5082153308175028979, guid: e4b7af4016311eb4fb6b7e62e800e310,
         type: 3}
