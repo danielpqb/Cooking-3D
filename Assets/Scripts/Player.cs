@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
         float moveDistance = moveSpeed * Time.deltaTime;
 
         float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, lastMoveDir, Time.deltaTime * rotateSpeed);
+        Vector3 newForwardDirection = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        if (newForwardDirection.magnitude > 0) transform.forward = newForwardDirection;
 
         float moveIndicatorDistance = 1.5f;
         moveIndicator.transform.position = transform.position + moveIndicatorDistance * moveDir;
